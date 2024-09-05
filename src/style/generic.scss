@@ -1,0 +1,12 @@
+@use './partials/variables' as *;
+@import "node_modules/bootstrap/scss/bootstrap";
+
+body {
+    background-color: $main_colour;
+}
+.ms-writing {
+    color: $write_white;
+}
+ul{
+    list-style: none;
+}
