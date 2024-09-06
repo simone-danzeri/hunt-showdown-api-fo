@@ -1,14 +1,19 @@
 <script>
+import { RouterLink } from 'vue-router';
+
     export default {
-        name: 'AppSidebar'
-    }
+    name: 'AppSidebar',
+    components: { RouterLink }
+}
 </script>
 
 <template>
     <section class="sidebar">
         <div class="d-flex">
             <ul class="ms-writing">
-                <li>Maps</li>
+                <li>
+                    <router-link :to="{ name: 'maps' }">Maps</router-link>
+                </li>
                 <li>Bosses</li>
                 <li>Enemies</li>
             </ul>
@@ -20,9 +25,6 @@
 <style scoped lang="scss">
     @use '../style/partials/variables' as *;
     .sidebar{
-        // DEBUGG
-        background-color: pink;
-        // DEBUGG
         position: absolute;
         top: 30%;
         left: 0%;
